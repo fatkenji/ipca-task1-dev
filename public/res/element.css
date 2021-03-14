@@ -1,0 +1,148 @@
+
+.hidden {
+	display: none;
+}
+
+ul.tab-header{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+ul.tab-header > li > label > .tab-text{
+	position: relative;
+	padding: 1rem;
+	cursor: pointer;
+	text-align: center;
+	border-bottom: solid .2rem var(--BrandColor2);
+}
+ul.tab-header > li > label > .tab-text:after{
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	display: block;
+	content: '';
+	background-color:var(--BrandColor2);
+	width: 100%;
+	height: 0;
+	transition: height .1s;
+}
+
+ul.tab-header > li > label > :checked + .tab-text:after{
+	height: .4rem;
+}
+
+
+.table-xscroll{
+	display: grid;
+	overflow: hidden;
+	overflow-x:auto;
+
+	/* mobile browser smooth scrolling */
+	-webkit-overflow-scrolling: touch;
+	-webkit-tap-highlight-color: transparent;
+}
+
+table.data-table,
+table.data-table *{
+	box-sizing: border-box;
+}
+
+table.data-table
+{
+	--default-font-stack: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+
+	font-family: var(--FontStack, var(--default-font-stack));
+	font-size: 1rem;
+    text-align: left;
+
+	width: max-content; /* related to table-width-fix */
+	min-width:1024px;
+	margin:0 auto;
+    padding: 0;
+    border-spacing: 0;
+	border-collapse: separate; /* make th border stay when position sticky */
+
+	/* The collapsing border model is exactly what makes rows stylable */
+	/* border-collapse: collapse; */
+}
+
+table.data-table > thead > tr > th,
+table.data-table > tbody > tr > td{
+    background-color:rgba(255,255,255,.09);
+}
+table.data-table > tbody > tr:nth-child(odd) > td {
+    background-color:rgba(0,0,0,.01);
+}
+
+
+table.data-table > tbody > tr > td{
+    border-bottom: solid 1px rgba(0,0,0,.03);
+}
+table.data-table > tbody > tr:first-child > td{
+    border-top: solid 1px rgba(0,0,0,.03);
+}
+
+
+table.data-table > thead > tr > th,
+table.data-table > tbody > tr > td{
+	max-width: 300px; /* given table's width size, table will respect this when too many cols, otherwise when lesser cols it will adjust nicely */
+	vertical-align: top;
+	padding: .8rem 1rem;
+}
+table.data-table > thead > tr > th
+{
+    vertical-align: bottom;
+    font-weight: var(--font-wt-bold, 600);
+}
+
+
+
+
+.gray-field{
+    display: grid;
+    background-color: var(--InputBackColor);
+    padding: .5rem;
+    border-radius: .3rem;
+}
+
+.gray-field input,
+.gray-field select,
+.gray-field textarea{
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    -webkit-appearance: none;
+    line-height: 1.5rem;
+    resize: none; /* for textarea */
+	min-width: 0; /* fix for overlapping grid items*/
+}
+.gray-field select{
+    -webkit-appearance: auto;
+}
+
+
+.sexy-scrollbar {
+	overflow: auto;
+	-webkit-overflow-scrolling: touch;
+
+	/* firefox support */
+	scrollbar-width: thin;
+}
+
+.sexy-scrollbar::-webkit-scrollbar {
+	width: .5rem;
+	height: .5rem;
+}
+
+.sexy-scrollbar::-webkit-scrollbar-track {
+	background-color: #fafafa;
+}
+
+.sexy-scrollbar::-webkit-scrollbar-thumb {
+	background-color: #dddddd;
+}
+
+.sexy-scrollbar::-webkit-scrollbar-thumb:hover {
+	background-color: #aaaaaa;
+}
