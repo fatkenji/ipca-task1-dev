@@ -3,11 +3,9 @@ A web app portal for branch stores to view and update product prices.
 
 ![subs-tab](/readme/subs-tab.png)
 
----
 ## Demo
 Here is a live demo :  [demo-link]
 
----
 ## Features
  - Ability to select current store
  - There are two product categories - Subs and Non-subs
@@ -18,7 +16,6 @@ Here is a live demo :  [demo-link]
  - Submit price change (not implemented yet)
  - Display message when there are no products found
 
----
 ## Usage
 1. From landing page, select a store
 2. After selecting a store it should show the products under currently selected category tab
@@ -27,16 +24,13 @@ Here is a live demo :  [demo-link]
 5. press `Reset` button to revert changes
 
 
----
-## Bug
+## Bugs
 - None so far
 
----
 ## TODO
 - Implement functionality for `Submit` button
 - New API endpoint that will accept data for price changes from stores
 
----
 ## Tech Stack Used
 - Javascript and CSS3
 - [Svelte.dev v3](https://svelte.dev)
@@ -44,7 +38,6 @@ Here is a live demo :  [demo-link]
 - [VSCode editor](https://code.visualstudio.com/)
 - [GitHub Desktop](https://desktop.github.com/)
 
----
 ## Dev Setup
 1. Using `GitHub Desktop` app, clone from https://github.com/fatkenji/ipca-task1-dev.git
 2. Inside the app directory run NPM to install dependencies
@@ -56,7 +49,6 @@ npm install
 npm run dev
 ```
 
----
 ## Deployment
 1. Inside the app directory run
 ```
